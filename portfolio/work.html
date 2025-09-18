@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dondylan Works</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    body {
+      background: #000;
+      color: #077b32;
+      min-height: 100vh;
+      position: relative;
+    }
+  
+  </style>
+</head>
+<body>
+ <nav>
+    <div class="nav-container">
+      <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+        Don <span>Dylan</span>
+      </div>
+      <div class="links">
+        <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="index.html">Home</a></div>
+        <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="about.html">About</a></div>
+        <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="work.html">Work</a></div>
+        <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="contact.html">Contact</a></div>
+      </div>
+       <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    </div>
+    <div class="dropdown">
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="work.html">Work</a>
+        <a href="contact.html">Contact</a>
+        <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+      </div>
+    </div>
+  </nav>
+  <div class="background"></div>
+  <canvas id="particles"></canvas>
+  <h1 class="section-title" data-aos="fade-up" data-aos-duration="1500">My Builds</h1>
+  <div class="projects-showcase">
+    <div class="project-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+      <div class="project-card-inner">
+        <div class="project-content">
+          <h3>E-commerce Website</h3>
+          <a href="https://spectacular-starburst-6baaeb.netlify.app">Visit Site <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="project-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+      <div class="project-card-inner">
+        <div class="project-content">
+          <h3>Business Landing Page</h3>
+          <a href="https://dynamic-pony-f86a71.netlify.app">Visit Site <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="project-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
+      <div class="project-card-inner">
+        <div class="project-content">
+          <h3>Project Showcase Website</h3>
+          <a href="https://hilarious-brioche-e179ba.netlify.app">Visit Site <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ offset: 120 });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

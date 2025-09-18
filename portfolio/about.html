@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Dondylan</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background-color: #000;
+      color: #077b32;
+      min-height: 100vh;
+      background-image: radial-gradient(circle at 50% 50%, #0a0a0a 0%, #000000 100%);
+    }
+
+    .profile-toggle-container {
+      text-align: center;
+      margin: 40px 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      z-index: 100;
+    }
+
+    .profile-btn {
+      background: rgba(0, 255, 95, 0.08);
+      border: 2px solid #077b32;
+      color: #00ff5f;
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      backdrop-filter: blur(10px);
+      transition: all 0.5s ease;
+      box-shadow: 0 0 10px #077b32;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .profile-btn::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: -100%;
+      top: 0;
+      background: linear-gradient(120deg, transparent, #00ff5f80, transparent);
+      transition: left 0.6s ease;
+      z-index: 1;
+    }
+
+    .profile-btn:hover::before {
+      left: 100%;
+    }
+
+    .profile-btn:hover {
+      color: #000;
+      background: rgba(0, 255, 95, 0.2);
+      box-shadow: 0 0 20px #00ff5f, 0 0 40px #077b32;
+      border: 2px solid #00ff5f;
+      transform: scale(1.05);
+    }
+
+    .profile-btn:focus {
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+        Don <span>Dylan</span>
+      </div>
+      <div class="links">
+        <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="index.html">Home</a></div>
+        <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="about.html">About</a></div>
+        <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="work.html">Work</a></div>
+        <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="contact.html">Contact</a></div>
+      </div>
+      <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    </div>
+    <div class="dropdown">
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="work.html">Work</a>
+        <a href="contact.html">Contact</a>
+        <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+      </div>
+    </div>
+  </nav>
+
+  <div class="profile-toggle-container">
+    <button onclick="showProfile('code')" class="profile-btn" id="codeBtn">Coding Profile</button>
+    <button onclick="showProfile('civil')" class="profile-btn" id="civilBtn">Civil Engineering Profile</button>
+  </div>
+
+ <div class="about-body">
+   <div id="code-profile">
+    <h1 class="cyber-heading" data-aos="fade-down" data-aos-duration="1000">WHO IS DONDYLAN?</h1>
+    <div class="about-wrapper">
+      <div class="intro-box" data-aos="fade-up" data-aos-duration="1500">
+        <div class="intro-image">
+          <img src="images/di (1).jpg" alt="Dondylan Coding">
+        </div>
+        <div class="intro-text" data-aos="fade-left" data-aos-duration="1500">
+          <h2>The Code Architect</h2>
+          <p>I’m Dondylan — a digital craftsman who builds high-performance websites, POS systems, and strategic advertisements with a touch of code-driven magic. With every pixel and line, I engineer experiences that stand out in today’s tech noise.</p>
+        </div>
+      </div>
+
+      <div class="skills-section">
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+          <i class="fa-solid fa-laptop-code"></i>
+          <h3>Web Wizardry</h3>
+          <p>From static sites to dynamic apps — I make responsive, lightning-fast experiences happen.</p>
+        </div>
+
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
+          <i class="fa-solid fa-cash-register"></i>
+          <h3>POS Systems</h3>
+          <p>Tailored Point of Sale software that’s as intuitive as it is powerful — built for real businesses.</p>
+        </div>
+
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="600">
+          <i class="fa-solid fa-bullseye"></i>
+          <h3>Smart Advertising</h3>
+          <p>Strategic, stunning digital ads that speak directly to your target — and convert.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="civil-profile" style="display: none;">
+    <h1 class="cyber-heading" data-aos="fade-down" data-aos-duration="1000">WHO IS DONDYLAN?</h1>
+    <div class="about-wrapper">
+      <div class="intro-box" data-aos="fade-up" data-aos-duration="1500">
+        <div class="intro-image">
+          <img src="images/di (1).jpg" alt="Dondylan Civil">
+        </div>
+        <div class="intro-text" data-aos="fade-left" data-aos-duration="1500">
+          <h2>The Builder of Tomorrow</h2>
+          <p>I am a Civil Engineering student at Dedan Kimathi University of Technology, passionate about infrastructure, structural design, and sustainable development. I have gained hands-on experience in road design, materials testing, road construction, and site supervision through academic training and field attachments.</p>
+        </div>
+      </div>
+
+      <div class="skills-section">
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+          <i class="fa-solid fa-road"></i>
+          <h3>Site Supervision</h3>
+          <p>Experienced in overseeing road layers, drainage, and culvert works with an eye for precision.</p>
+        </div>
+
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
+          <i class="fa-solid fa-flask"></i>
+          <h3>Lab Testing</h3>
+          <p>Skilled in CBR testing, sieve analysis, Atterberg limits, and field density methods.</p>
+        </div>
+
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="600">
+          <i class="fa-solid fa-drafting-compass"></i>
+          <h3>Surveying</h3>
+          <p>Proficient with RTK for level control and setting out drainage and road alignments.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ </div>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ offset: 120 });
+
+    function showProfile(profile) {
+      const code = document.getElementById("code-profile");
+      const civil = document.getElementById("civil-profile");
+      const codeBtn = document.getElementById("codeBtn");
+      const civilBtn = document.getElementById("civilBtn");
+
+      if (profile === 'code') {
+        code.style.display = 'block';
+        civil.style.display = 'none';
+        codeBtn.classList.add('active');
+        civilBtn.classList.remove('active');
+      } else {
+        code.style.display = 'none';
+        civil.style.display = 'block';
+        civilBtn.classList.add('active');
+        codeBtn.classList.remove('active');
+      }
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
